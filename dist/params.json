@@ -1,0 +1,12 @@
+{
+    "domainUrl": "",
+    "requestValidity": 100000,
+    "printCost": 55.0,
+    "shippingCost": {
+        "domestic": 5.0,
+        "international": 10.0
+    },
+    "domesticCode": "US",
+    "conatractAddress": "",
+    "rpc": ""
+}

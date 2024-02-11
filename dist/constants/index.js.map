@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"src/","sources":["constants/index.ts"],"names":[],"mappings":";;;;AAAA,gFAA2C;AAC3C,wEAAmC;AAEtB,QAAA,UAAU,GAAG,yBAAU,CAAC;AACxB,QAAA,MAAM,GAAG,qBAAM,CAAC","sourcesContent":["import governance from \"./Governance.json\";\nimport system from \"./System.json\";\n\nexport const Governance = governance;\nexport const System = system;\n"]}

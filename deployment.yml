@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 3dhoudini-server-deployment
+  labels:
+    app: 3dhoudini-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: 3dhoudini-server
+  template:
+    metadata:
+      labels:
+        app: 3dhoudini-server
+    spec:
+      containers:
+        - name: 3dhoudini-server
+          image: 664848377136.dkr.ecr.ap-south-1.amazonaws.com/3dhoudini-server:commit-number
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+          env:
+            - name: PORT
+              value: "PORT_VALUE"
+            - name: COINBASE_API_KEY
+              value: "COINBASE_API_KEY_VALUE"
+            - name: COINBASE_WEBHOOK_SECRET
+              value: "COINBASE_WEBHOOK_SECRET_VALUE"
+            - name: EASYPOST_API_KEY
+              value: "EASYPOST_API_KEY_VALUE"
+            - name: STRIPE_API_KEY
+              value: "STRIPE_API_KEY_VALUE"
+            - name: STRIPE_WEBHOOK_SECRET
+              value: "STRIPE_WEBHOOK_SECRET_VALUE"   
+            - name: ALCHEMY_API_KEY
+              value: "ALCHEMY_API_KEY_VALUE"   
+            - name: DATABASE_URI_DEV
+              value: "DATABASE_URI_DEV_VALUE"
+# 1. If  "spec.ingressClassName: my-aws-ingress-class" not specified, will reference default ingress class on this kubernetes cluster
+# 2. Default Ingress class is nothing but for which ingress class we have the annotation `ingressclass.kubernetes.io/is-default-class: "true"`

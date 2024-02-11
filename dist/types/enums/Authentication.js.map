@@ -1,0 +1,1 @@
+{"version":3,"file":"Authentication.js","sourceRoot":"src/","sources":["types/enums/Authentication.ts"],"names":[],"mappings":";;;AAAA,IAAY,IAGX;AAHD,WAAY,IAAI;IACd,qBAAa,CAAA;IACb,oBAAY,CAAA;AACd,CAAC,EAHW,IAAI,oBAAJ,IAAI,QAGf","sourcesContent":["export enum Role {\n  admin = \"R00\",\n  user = \"R01\"\n}\n"]}
